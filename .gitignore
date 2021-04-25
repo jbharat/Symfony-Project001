@@ -7,4 +7,5 @@
 /public/bundles/
 /var/
 /vendor/
+/.Symfony-Project001.komodoproject
 ###< symfony/framework-bundle ###
