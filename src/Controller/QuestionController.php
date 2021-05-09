@@ -8,19 +8,23 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuestionController extends AbstractController
 {
 	/**
-	 * @Route("/")
+	 * @Route("/" , name="app_homepage")
 	 */
 	public function homepage()
 	{
-		return new Response("This is first message from symfony <a href='./questions/future-page-for-questions'>Question 1</a>");
+		//return new Response("This is first message from symfony <a href='./questions/future-page-for-questions'>Question 1</a>");
+		return $this->render('question/homepage.html.twig');
 	}
 
 	/**
-	 * @Route("/questions/{slug}")
+	 * @Route("/questions/{slug}" , name="app_question_show")
 	 */
 	public function show($slug)
 	{
 		$answers = ['First','Second','Third'];
+
+		dump($this);
+		//dd($slug, $this);
 		return $this->render('question/show.html.twig',[
 			'question' => ucwords(str_replace('-',' ',$slug)),
 			'answers' => $answers
