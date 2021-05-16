@@ -1,9 +1,12 @@
 <?php
 namespace App\Controller;
 
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+//use Twig\Environment;
+
 
 class QuestionController extends AbstractController
 {
@@ -14,6 +17,8 @@ class QuestionController extends AbstractController
 	{
 		//return new Response("This is first message from symfony <a href='./questions/future-page-for-questions'>Question 1</a>");
 		return $this->render('question/homepage.html.twig');
+	 //   $html = $twigEnv->render('question/homepage.html.twig');
+	  //  Return new Response($html);
 	}
 
 	/**
