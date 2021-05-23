@@ -28,7 +28,7 @@ class QuestionController extends AbstractController
 	{
 		$answers = ['First','Second','Third'];
 
-		dump($this);
+		//dump($this);
 		//dd($slug, $this);
 		return $this->render('question/show.html.twig',[
 			'question' => ucwords(str_replace('-',' ',$slug)),
